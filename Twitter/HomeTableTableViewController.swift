@@ -18,10 +18,9 @@ class HomeTableTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadTweets()
-        
+        numberOfTweet = 20
         myRefeshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
-        tableView.refreshControl = myRefeshControl
+        self.tableView.refreshControl = myRefeshControl
     }
     
     
